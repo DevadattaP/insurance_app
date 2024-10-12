@@ -1,0 +1,25 @@
+.container {
+  max-width: 900px;
+}
+
+.nav-tabs .nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #007bff;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #007bff;
+}
+
+button {
+  font-size: 1rem;
+}
