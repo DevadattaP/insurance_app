@@ -63,6 +63,7 @@ To create a new Ethereum account using Truffle, you can use the following comman
    ```
 
 First 2 steps are for first time users only. You can skip them for later use.
+
 3. **Start Ganache CLI:**
     Run a local blockchain using Ganache CLI (from project root directory, `insurance-dapp`):
     ```bash
@@ -107,6 +108,7 @@ First 2 steps are for first time users only. You can skip them for later use.
   - `deployments.json`: Contains addresses of deployed contracts, created while initializing blockchain.
 - `truffle-config.js`: Configuration file for Truffle.
 - `genesis.json`: Contains configuration for genesis (first) block in the blockchain.
+- `password.txt`: Contains password for blockchain account (need to use for unlocking blockchain)
 
 ## Steps to Carry Out on the DApp UI
 
