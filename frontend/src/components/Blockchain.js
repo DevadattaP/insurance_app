@@ -94,9 +94,9 @@ const Blockchain = ({ goToTab }) => {
     return (
         <div className="container mt-4">
             <h2>Blockchain Operations</h2>
-            <button className="btn btn-primary mt-2" onClick={addBlock} disabled={isProcessing}>
+            {/* <button className="btn btn-primary mt-2" onClick={addBlock} disabled={isProcessing}>
                 {isProcessing ? "Adding Block..." : "Add Block to Blockchain"}
-            </button>
+            </button> */}
             <button className="btn btn-secondary mt-2 ml-2" onClick={validateChain} disabled={isProcessing}>
                 {isProcessing ? "Validating..." : "Validate Blockchain"}
             </button>
