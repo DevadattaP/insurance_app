@@ -50,33 +50,46 @@ To create blockchain using truffle and ganache, follow these steps:
 
 Follow these steps to run the project:
 
-1. **Start Ganache CLI:**
+1. **Create account using truffle: (ensure that you are in project root directory**
+To create a new Ethereum account using Truffle, you can use the following command:
+   ```bash
+   npx truffle create account
+   ```
+   Follow the steps and remember password. Create new file `password.txt` in root folder and write password in it, to unlock the account for further processing.
+
+2. **Initialize blockchain using `genesis.json`:**
+   ```bash
+   npx ganache-cli --port 8545 --networkId 12345 --gasLimit 10000000 --chain.genesis genesis.json
+   ```
+
+First 2 steps are for first time users only. You can skip them for later use.
+3. **Start Ganache CLI:**
     Run a local blockchain using Ganache CLI (from project root directory, `insurance-dapp`):
     ```bash
     npx ganache-cli --port 8545 --networkId 12345 --gasLimit 10000000
     ```
     This command will start a local Ethereum blockchain on port `8545` with a specified network ID and gas limit.
 
-2. **Deploy Smart Contracts using Truffle:**
+4. **Deploy Smart Contracts using Truffle:**
     Deploy the contracts to the local blockchain (from project root directory, `insurance-dapp`):
     ```bash
     npx truffle migrate --network development --reset
     ```
     This command will deploy the smart contracts to the blockchain network.
 
-3. **Copy the files from `insurance-dapp/build/contracts` to `insurance-dapp/frontend/src/contracts`:-**
+5. **Copy the files from `insurance-dapp/build/contracts` to `insurance-dapp/frontend/src/contracts`:-**
    Ensure you are in project root folder, `insurane-dapp`, and executefollowing command:
    ```bash
    cp -r build/contracts/* frontend/src/contracts/
 
    ```
-4. **Copy `deployments.json` file from root folder to `frontend/src` folder:-**
+6. **Copy `deployments.json` file from root folder to `frontend/src` folder:-**
    Ensure you are in project root folder, `insurane-dapp`, and executefollowing command:
    ```bash
    cp -r deployments.json frontend/src/
 
    ```
-5. **Start the DApp:**
+7. **Start the DApp:**
     Launch the DApp in your local development environment (from `frontend` directory):
     ```bash
     npm start
