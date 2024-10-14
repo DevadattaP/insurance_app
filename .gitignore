@@ -22,5 +22,5 @@ yarn-error.log*
 
 # blockchain related files
 data
-passwords.txt
+password.txt
 deployments.json
