@@ -40,57 +40,38 @@ Follow the steps below to set up the project and install the necessary packages:
     npm install web3 react-router-dom bootstrap
     ```
 
-## Blockchain initialization
-
-To create blockchain using truffle and ganache, follow these steps:
-
-
+> [!NOTE]
+> I have following versions:
+> - npm v10.8.2
+> - node v18.17.1
+> - Truffle v5.11.5
+> - Ganache v7.9.1
+> - Web3.js v1.10.0
+> - Solidity v0.5.16 (solc-js)
 
 ## Running the Project
 
 Follow these steps to run the project:
 
-1. **Create account using truffle: (ensure that you are in project root directory**
-To create a new Ethereum account using Truffle, you can use the following command:
-   ```bash
-   npx truffle create account
-   ```
-   Follow the steps and remember password. Create new file `password.txt` in root folder and write password in it, to unlock the account for further processing.
-
-2. **Initialize blockchain using `genesis.json`:**
-   ```bash
-   npx ganache-cli --port 8545 --networkId 12345 --gasLimit 10000000 --chain.genesis genesis.json
-   ```
-
-First 2 steps are for first time users only. You can skip them for later use.
-
-3. **Start Ganache CLI:**
+1. **Start Ganache CLI:**
     Run a local blockchain using Ganache CLI (from project root directory, `insurance-dapp`):
     ```bash
     npx ganache-cli --port 8545 --networkId 12345 --gasLimit 10000000
     ```
     This command will start a local Ethereum blockchain on port `8545` with a specified network ID and gas limit.
 
-4. **Deploy Smart Contracts using Truffle:**
+2. **Deploy Smart Contracts using Truffle:**
     Deploy the contracts to the local blockchain (from project root directory, `insurance-dapp`):
     ```bash
     npx truffle migrate --network development --reset
     ```
     This command will deploy the smart contracts to the blockchain network.
 
-5. **Copy the files from `insurance-dapp/build/contracts` to `insurance-dapp/frontend/src/contracts`:-**
-   Ensure you are in project root folder, `insurane-dapp`, and executefollowing command:
-   ```bash
-   cp -r build/contracts/* frontend/src/contracts/
+3. **Copy the files from `insurance-dapp/build/contracts` to `insurance-dapp/frontend/src/contracts`**
 
-   ```
-6. **Copy `deployments.json` file from root folder to `frontend/src` folder:-**
-   Ensure you are in project root folder, `insurane-dapp`, and executefollowing command:
-   ```bash
-   cp -r deployments.json frontend/src/
-
-   ```
-7. **Start the DApp:**
+4. **Copy `deployments.json` file from root folder to `frontend/src` folder**
+   
+5. **Start the DApp:**
     Launch the DApp in your local development environment (from `frontend` directory):
     ```bash
     npm start
@@ -159,7 +140,6 @@ First 2 steps are for first time users only. You can skip them for later use.
 ## Smart contract without DApp:
 To execute the smart contracts without DApp, you can run the `Extra/InsuranceSystem.sol` file in local blockchain, or you can execute it using Remix IDE. The steps and detailed explaination about contracts for the same are given in `Extra/Contract_functionality_workflow.pdf` file.
 
----
 ___
 
 ### Feel free to open issues or contribute to this project by making a pull request. Happy coding! 🚀
